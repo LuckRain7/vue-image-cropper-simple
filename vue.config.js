@@ -5,5 +5,6 @@
  */
 
 module.exports = {
-  outputDir: "dist" //打包地址
+  outputDir: "dist", //打包地址
+  publicPath: "/vue-image-cropper-simple/dist/" // 部署应用包时的基本 URL
 };
