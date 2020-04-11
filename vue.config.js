@@ -5,5 +5,5 @@
  */
 
 module.exports = {
-  outputDir: "docs" //打包地址
+  outputDir: "dist" //打包地址
 };
