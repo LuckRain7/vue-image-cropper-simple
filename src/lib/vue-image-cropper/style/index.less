@@ -1,0 +1,151 @@
+// 遮罩层
+.vue-image-cropper {
+  position: fixed;
+  display: block;
+  box-sizing: border-box;
+  z-index: 10000;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(#000, 0.65);
+  -webkit-tap-highlight-color: transparent;
+  -moz-tap-highlight-color: transparent;
+
+  // 中心显示框
+  .vic-wrap {
+    position: fixed;
+    display: block;
+    box-sizing: border-box;
+    z-index: 10000;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 580px;
+    height: 483px;
+    background-color: #fff;
+    border-radius: 2px;
+    box-shadow: 0 1px 3px 0 rgba(#000, 0.23);
+
+    // 头部
+    .vic-header {
+      height: 44px;
+      width: 100%;
+      background: #dcdcdc;
+      line-height: 44px;
+
+      // 标题文字
+      span {
+        color: #40485b;
+        font-size: 14px;
+        margin-left: 20px;
+      }
+
+      // 关闭按钮
+      i {
+        float: right;
+        font-size: 1.143rem;
+        margin-right: 20px;
+        width: 1.143rem;
+        height: 1.143rem;
+        color: #5c7b8b;
+        cursor: pointer;
+      }
+    }
+
+    // 主体部分
+    .vic-main {
+      position: absolute;
+      width: 100%;
+      top: 44px;
+      bottom: 0;
+
+      // 图片div
+      .vic-img-box {
+        position: relative;
+        display: inline-block;
+        height: 350px;
+        width: 350px;
+        border: 0.02rem solid #dcdcdc;
+        // box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        background-repeat: no-repeat;
+        cursor: move;
+        margin-left: 20px;
+        margin-top: 20px;
+        overflow: hidden;
+
+        canvas {
+          position: absolute;
+          display: block;
+          box-sizing: border-box;
+          // border: 0.02rem solid #ddd;
+        }
+
+        // 裁剪框
+        .vic-main-mark {
+          box-sizing: border-box;
+          position: absolute;
+          z-index: 999;
+          // border: 0.02rem solid lightcoral;
+          // background: rgba(255, 255, 255, 0.2);
+          box-shadow: 1px 1px 11px rgba(0, 0, 0, 0.5);
+        }
+      }
+      // 预览div
+      .vic-preview-box {
+        height: 350px;
+        width: 180px;
+        float: right;
+        margin-right: 20px;
+        margin-top: 20px;
+
+        //
+        ul {
+          list-style: none;
+          margin-right: 20px;
+          li {
+            margin: 30px auto;
+            text-align: center;
+            font-size: 14px;
+            img {
+              height: 100px;
+              width: 100px;
+              border: 1px solid #dcdcdc;
+            }
+            .vic-pb-cricle {
+              img {
+                border-radius: 50%;
+              }
+            }
+          }
+        }
+      }
+
+      // 按钮div
+      .vic-actions {
+        height: 37px;
+        width: 540px;
+        margin: 10px auto;
+
+        .vic-right-btn {
+          float: right;
+          button {
+            min-width: 50px;
+            // width: auto;
+            height: 32px;
+            margin: auto 10px;
+            border: none; //自定义边框
+            outline: none; //消除默认点击蓝色边框效果
+            background: #6dc731;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}
