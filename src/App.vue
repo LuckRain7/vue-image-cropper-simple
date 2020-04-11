@@ -30,6 +30,11 @@ export default {
       imageSrc: "/logo.png"
     };
   },
+  mounted() {
+    if (process.env.NODE_ENV === "production") {
+      this.imageSrc = "/vue-image-cropper-simple/dist/logo.png";
+    }
+  },
   methods: {
     go() {
       this.isVisible = !this.isVisible;
