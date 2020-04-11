@@ -83,7 +83,7 @@
 </template>
 
 <script>
-import { VueDebounce } from "./utils/index";
+import { VueDebounce, base64ToBlob } from "./utils/index";
 
 export default {
   data() {
@@ -124,15 +124,27 @@ export default {
       type: Boolean,
       default: false
     },
-    // 图片输出模式
+    // 图片输出模式 base64 or Blob
     model: {
       type: String,
       default: "base64"
     }
+    // // 裁剪高度
+    // height: {
+    //   type: Number,
+    //   default: 300
+    // },
+    // // 裁剪宽度
+    // width: {
+    //   type: Number,
+    //   default: 300
+    // }
   },
   methods: {
     /* 关闭组件 */
     close() {
+      // 清除图片
+      if (this.newImage) this.newImage = null;
       // 修改组件状态--未上传image
       this.status = 0;
       // 关闭组件
@@ -313,7 +325,11 @@ export default {
     /* 确定生成图片 */
     saveImage() {
       // 将图片数据传递到父组件
-      this.$emit("transmitImageData", this.ImgUrl);
+
+      this.model == "base64"
+        ? this.$emit("transmitImageData", this.ImgUrl)
+        : this.$emit("transmitImageData", base64ToBlob(this.ImgUrl));
+
       this.close();
     }
   }

@@ -5,34 +5,63 @@
  -->
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" @click="go" />
+    <div class="my-title">
+      vue-image-cropper-simple
+    </div>
+    <div class="gogo">
+      <img alt="Vue logo" :src="imageSrc" @click="go" />
+      <p>点击图片上传</p>
+    </div>
     <image-cropper
       :isVisible.sync="isVisible"
-      model="fromData"
+      model="base64"
       @transmitImageData="transmitImageData"
     ></image-cropper>
   </div>
 </template>
 
 <script>
-import ImageCropper from "./lib/vue-image-cropper/vue-image-cropper.vue";
+import ImageCropper from "./lib/vue-image-cropper-simple/index.vue";
 export default {
   name: "App",
   data() {
     return {
-      isVisible: true
+      isVisible: false,
+      imageSrc: "/logo.png"
     };
   },
   methods: {
     go() {
       this.isVisible = !this.isVisible;
     },
-    transmitImageData(e) {
-      console.log(e);
+    transmitImageData(imageDataBase64) {
+      this.imageSrc = imageDataBase64;
     }
   },
   components: { ImageCropper }
 };
 </script>
 
-<style lang="less"></style>
+<style lang="less">
+#app {
+  width: 100%;
+  height: 100%;
+
+  .my-title {
+    height: 40px;
+    min-width: 600px;
+    text-align: center;
+    line-height: 40px;
+    margin: 30px auto;
+    font-size: 30px;
+    color: #606f7b;
+  }
+  .gogo {
+    height: 200px;
+    width: 200px;
+    margin: auto auto;
+    text-align: center;
+    color: #606f7b;
+  }
+}
+</style>

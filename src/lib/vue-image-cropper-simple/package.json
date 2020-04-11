@@ -1,0 +1,31 @@
+{
+  "name": "vue-image-cropper-simple",
+  "version": "1.0.0",
+  "description": "A simple and effective vue component for image crop. （基于vue的图片剪裁组件）.",
+  "main": "index.vue",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LuckRain7/vue-image-cropper-simple.git"
+  },
+  "keywords": [
+    "vue",
+    "image",
+    "picture",
+    "photo",
+    "crop",
+    "cropper",
+    "file",
+    "avatar",
+    "头像",
+    "图片剪裁"
+  ],
+  "author": "LuckRain7",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LuckRain7/vue-image-cropper-simple/issues"
+  },
+  "homepage": "https://github.com/LuckRain7/vue-image-cropper-simple#readme"
+}
