@@ -1,5 +1,7 @@
 # vue-image-cropper-simple
 
+> A simple and effective vue component for image crop. （基于 vue 的图片剪裁组件）
+
 #### 安装
 
 ```bash
@@ -19,16 +21,14 @@ $ yarn add vue-image-cropper-simple
 </image-cropper>
 ```
 
-#### DEMO地址
-
-
+#### DEMO 地址
 
 #### Props
 
-| 名称      | 类型    | 值                | 说明                             |
-| :-------- | :------ | :---------------- | -------------------------------- |
-| isVisible | Boolean | false(默认)/true  | 是否显示组件                     |
-| model     | String  | base64(默认)/Blob | 输入图片格式是base64或者Blob格式 |
+| 名称      | 类型    | 值                | 说明                                 |
+| :-------- | :------ | :---------------- | ------------------------------------ |
+| isVisible | Boolean | false(默认)/true  | 是否显示组件                         |
+| model     | String  | base64(默认)/Blob | 输入图片格式是 base64 或者 Blob 格式 |
 
 #### Events
 
@@ -77,7 +77,4 @@ export default {
   components: { ImageCropper }
 };
 </script>
-
-
 ```
-

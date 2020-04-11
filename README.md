@@ -1,5 +1,7 @@
 # vue-image-cropper-simple
 
+> A simple and effective vue component for image crop. （基于 vue 的图片剪裁组件）
+
 ## 安装
 
 ```bash

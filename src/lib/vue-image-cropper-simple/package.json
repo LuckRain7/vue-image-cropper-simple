@@ -1,7 +1,7 @@
 {
   "name": "vue-image-cropper-simple",
   "version": "1.0.0",
-  "description": "A simple and effective vue component for image crop. （基于vue的图片剪裁组件）.",
+  "description": "A simple and effective vue component for image crop. （基于vue的图片剪裁组件）",
   "main": "index.vue",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
