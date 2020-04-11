@@ -23,6 +23,8 @@ $ yarn add vue-image-cropper-simple
 
 #### DEMO 地址
 
+[DEMO](https://luckrain7.github.io/vue-image-cropper-simple/dist/index.html)
+
 #### Props
 
 | 名称      | 类型    | 值                | 说明                                 |
